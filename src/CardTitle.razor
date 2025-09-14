@@ -1,0 +1,19 @@
+@using Soenneker.Quark.Headings
+@using Soenneker.Quark.Headings.Enums
+@inherits Soenneker.Quark.Components.Element
+
+<Heading Size="HeadingSize.S5" @attributes="BuildAttributes()">
+    @ChildContent
+</Heading>
+
+@code {
+    protected override Dictionary<string, object> BuildAttributes()
+    {
+        Dictionary<string, object> attributes = base.BuildAttributes();
+        const string classes = "card-title";
+        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")?.ToString(), classes);
+        return attributes;
+    }
+}
+
+

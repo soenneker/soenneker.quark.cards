@@ -1,0 +1,19 @@
+@using Soenneker.Quark.Divs
+@inherits Soenneker.Quark.Components.Element
+
+<CascadingValue Value="@this" IsFixed="true">
+    <Div @attributes="BuildAttributes()">
+        @ChildContent
+    </Div>
+</CascadingValue>
+
+@code {
+    protected override Dictionary<string, object> BuildAttributes()
+    {
+        Dictionary<string, object> attributes = base.BuildAttributes();
+        var classes = "card";
+        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")?.ToString(), classes);
+        return attributes;
+    }
+}
+

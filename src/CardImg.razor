@@ -1,0 +1,29 @@
+@using Soenneker.Quark.Images
+@inherits Soenneker.Quark.Components.Element
+
+<Image @attributes="BuildAttributes()" />
+
+@code {
+
+	[Parameter]
+	public bool Top { get; set; }
+
+	[Parameter]
+	public bool Bottom { get; set; }
+
+	protected override Dictionary<string, object> BuildAttributes()
+	{
+		Dictionary<string, object> attributes = base.BuildAttributes();
+
+		var classes = "card-img";
+		if (Top)
+			classes = "card-img-top";
+		else if (Bottom)
+			classes = "card-img-bottom";
+
+		attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
+			?.ToString(), classes);
+		return attributes;
+	}
+
+}

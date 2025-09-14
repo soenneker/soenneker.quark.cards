@@ -1,0 +1,18 @@
+@using Soenneker.Quark.Paragraphs
+@inherits Soenneker.Quark.Components.Element
+
+<Paragraph @attributes="BuildAttributes()">
+    @ChildContent
+</Paragraph>
+
+@code {
+    protected override Dictionary<string, object> BuildAttributes()
+    {
+        Dictionary<string, object> attributes = base.BuildAttributes();
+        var classes = "card-text";
+        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")?.ToString(), classes);
+        return attributes;
+    }
+}
+
+

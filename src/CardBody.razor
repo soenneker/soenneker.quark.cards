@@ -1,0 +1,19 @@
+@using Soenneker.Quark.Divs
+@inherits Soenneker.Quark.Components.Element
+
+<Div @attributes="BuildAttributes()" >
+	@ChildContent
+</Div>
+
+@code {
+
+	protected override Dictionary<string, object> BuildAttributes()
+	{
+		Dictionary<string, object> attributes = base.BuildAttributes();
+		var classes = "card-body";
+		attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
+			?.ToString(), classes);
+		return attributes;
+	}
+
+}
