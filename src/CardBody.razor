@@ -10,7 +10,7 @@
 	protected override Dictionary<string, object> BuildAttributes()
 	{
 		Dictionary<string, object> attributes = base.BuildAttributes();
-		var classes = "card-body";
+		const string classes = "card-body";
 		attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
 			?.ToString(), classes);
 		return attributes;

@@ -41,12 +41,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.9" />
-        <PackageReference Include="Soenneker.Quark.Divs" Version="3.0.9" />
-        <PackageReference Include="Soenneker.Quark.Images" Version="3.0.7" />
+        <PackageReference Include="Soenneker.Quark.Divs" Version="3.0.10" />
+        <PackageReference Include="Soenneker.Quark.Images" Version="3.0.8" />
         <PackageReference Include="Soenneker.Quark.Headings" Version="3.0.6" />
-        <PackageReference Include="Soenneker.Quark.Paragraphs" Version="3.0.8" />
-        <PackageReference Include="Soenneker.Quark.Enums.Colors" Version="3.0.1" />
-        <!-- No custom CSS/JS interop needed -->
+        <PackageReference Include="Soenneker.Quark.Paragraphs" Version="3.0.9" />
     </ItemGroup>
 </Project>
