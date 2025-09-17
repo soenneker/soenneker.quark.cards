@@ -1,8 +1,9 @@
+@using Soenneker.Quark.Enums.Scales
 @using Soenneker.Quark.Headings
-@using Soenneker.Quark.Headings.Enums
+
 @inherits Soenneker.Quark.Components.Element
 
-<Heading Size="HeadingSize.S5" @attributes="BuildAttributes()">
+<Heading Scale="Scale.S5" @attributes="BuildAttributes()">
     @ChildContent
 </Heading>
 
@@ -11,7 +12,7 @@
     {
         Dictionary<string, object> attributes = base.BuildAttributes();
         const string classes = "card-title";
-        attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")?.ToString(), classes);
+        AppendToClassAttr(attributes, classes);
         return attributes;
     }
 }

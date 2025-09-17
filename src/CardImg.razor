@@ -21,8 +21,7 @@
 		else if (Bottom)
 			classes = "card-img-bottom";
 
-		attributes["class"] = AppendToClass(attributes.GetValueOrDefault("class")
-			?.ToString(), classes);
+		AppendToClassAttr(attributes, classes);
 		return attributes;
 	}
 
