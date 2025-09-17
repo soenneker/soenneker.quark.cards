@@ -44,6 +44,6 @@
         <PackageReference Include="Soenneker.Quark.Divs" Version="3.0.10" />
         <PackageReference Include="Soenneker.Quark.Images" Version="3.0.10" />
         <PackageReference Include="Soenneker.Quark.Headings" Version="3.0.7" />
-        <PackageReference Include="Soenneker.Quark.Paragraphs" Version="3.0.9" />
+        <PackageReference Include="Soenneker.Quark.Paragraphs" Version="3.0.10" />
     </ItemGroup>
 </Project>
