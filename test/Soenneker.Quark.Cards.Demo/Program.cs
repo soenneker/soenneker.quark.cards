@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 using Serilog;
 using Serilog.Debugging;
+using Soenneker.Quark.Themes.Registrars;
 using Soenneker.Serilog.Sinks.Browser.Blazor.Registrars;
 
 namespace Soenneker.Quark.Cards.Demo;
@@ -29,6 +30,8 @@ public sealed class Program
             {
                 BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
             });
+
+            builder.Services.AddEmptyThemeProviderAsScoped();
 
             WebAssemblyHost host = builder.Build();
 
