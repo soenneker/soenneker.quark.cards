@@ -1,12 +1,11 @@
-@using Soenneker.Quark.Divs
 @inherits Soenneker.Quark.Element
 
 <Div @attributes="BuildAttributes()" >
 	@ChildContent
-
 </Div>
 
 @code {
+	public override string? Name { get; set; } = "CardHeader";
 
 	protected override Dictionary<string, object> BuildAttributes()
 	{

@@ -1,9 +1,9 @@
-@using Soenneker.Quark.Images
 @inherits Soenneker.Quark.Element
 
 <Image @attributes="BuildAttributes()" />
 
 @code {
+	public override string? Name { get; set; } = "CardImg";
 
 	[Parameter]
 	public bool Top { get; set; }

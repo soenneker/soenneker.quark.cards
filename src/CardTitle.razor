@@ -1,5 +1,4 @@
-@using Soenneker.Quark.Enums.Scales
-@using Soenneker.Quark.Headings
+@using Soenneker.Quark.Enums
 
 @inherits Soenneker.Quark.Element
 
@@ -8,6 +7,8 @@
 </Heading>
 
 @code {
+	public override string? Name { get; set; } = "CardTitle";
+
     protected override Dictionary<string, object> BuildAttributes()
     {
         Dictionary<string, object> attributes = base.BuildAttributes();
